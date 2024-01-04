@@ -1,4 +1,7 @@
 from pydantic import BaseModel, ValidationError, create_model
+from fastapi import HTTPException
+import json
+import urllib
 
 
 def decode_query(query: str) -> dict:
