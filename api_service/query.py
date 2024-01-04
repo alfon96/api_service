@@ -44,7 +44,7 @@ def decode_and_validate_query(query: str, validation_model: BaseModel) -> dict:
         raise e
 
 
-def validate_query_over_schema(validation_model: BaseModel, query: dict) -> BaseModel:
+def validate_query_over_schema(validation_model: BaseModel, query: dict) -> dict:
     """Check if every field of the input query is contained in the validation_model.
     It will throw an HTTPException with status_code 422, with the details of the issue if incorrect.
     Otherwise it will return the validated query as a dictionary where the types match with the schema.
